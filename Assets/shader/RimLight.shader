@@ -1,4 +1,5 @@
-﻿Shader "BJLN/RimLight" {
+﻿//边缘发光
+Shader "BJLN/RimLight" {
 	Properties {
 		_Color ("Color", Color) = (1,1,1,1)
 		_MainTex ("Albedo (RGB)", 2D) = "white" {}
