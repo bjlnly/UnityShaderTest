@@ -268,7 +268,6 @@ Library/*
 InspectorExpandedItems.asset
 Assets/BabyFrameWork
 Assets/BabyFrameWork.meta
-com.sinyee.babybus.talk2kiki
-com.sinyee.babybus.talk2kiki-Development
+*.apk
 ZTest
 ZTest.meta
