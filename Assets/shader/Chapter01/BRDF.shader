@@ -19,10 +19,11 @@
 
 		//自定义光照模型
 		inline float4 LightingBasicDiffuse(SurfaceOutput s,fixed3 lightDir, half3 viewDir, fixed atten){
-			float difLight = max(0, dot(s.Normal, lightDir));
+			float difLight = dot(s.Normal, lightDir);
 			float rimLight = dot(s.Normal, viewDir);
 			float hLambert = difLight * 0.5 +0.5;
-			float3 ramp = tex2D (_Bump, float2(hLambert, difLight).rgb;
+			//float3 ramp = tex2D(_Bump, float2(hLambert, rimLight)).rgb;
+			float3 ramp = tex2D (_Bump, float2(hLambert, rimLight)).rgb;
 			float4 col;
 			col.rgb = s.Albedo * _LightColor0.rgb * ramp;
 			col.a = s.Alpha;
