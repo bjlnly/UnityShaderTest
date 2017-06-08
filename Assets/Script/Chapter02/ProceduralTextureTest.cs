@@ -7,11 +7,12 @@ public class ProceduralTextureTest : MonoBehaviour {
     public int widthHeight = 512;
     public Texture2D GeneratedTexture2D;
     #endregion
-
     #region 私有变量
     private Material currentMaterial;
     private Vector2 centerPosition;
     #endregion
+
+    public AudioClip clip;
     // Use this for initialization
     void Start () {
         if (!currentMaterial)
@@ -23,7 +24,7 @@ public class ProceduralTextureTest : MonoBehaviour {
                 Debug.LogWarning(debug.Append("找不到一个合适的材质：  ").Append(transform.name));
             }
         }
-
+        GetComponent<AudioSource>().PlayOneShot(clip);
         if (currentMaterial)
         {
             centerPosition = new Vector2(0.5f, 0.5f);

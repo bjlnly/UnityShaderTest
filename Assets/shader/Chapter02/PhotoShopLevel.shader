@@ -44,7 +44,7 @@
 
 		void surf (Input IN, inout SurfaceOutputStandard o) {
 			half4 c = tex2D(_MainTex, IN.uv_MainTex);
-
+			
 			float outRPixel = GetPixelLevel(c.r);
 			float outGPixel = GetPixelLevel(c.g);
 			float outBPixel = GetPixelLevel(c.b);
